@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TheProfileOrderExperiment.iml" filepath="$PROJECT_DIR$/.idea/modules/TheProfileOrderExperiment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TheProfileOrderExperiment.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TheProfileOrderExperiment.app.iml" />
+    </modules>
+  </component>
+</project>
