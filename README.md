@@ -33,5 +33,8 @@
 2. Providing back button functionality.
 
 ### Screenshots -
+On Galaxy Nexus -
 ![Alt text](/screenshots/galaxy_nexus.png?raw=true "Galaxy Nexus")
+
+On PIxel 3 -
 ![Alt text](/screenshots/pixel_3.png?raw=true "Pixel 3")
