@@ -1,5 +1,6 @@
 package com.example.theprofileorderexperiment.ViewModel
 
+import android.app.Activity
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -15,15 +16,16 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class MainViewModel : ViewModel() {
-    val request = RetrofitClient.buildService(RetrofitInterface::class.java)
+    private val request = RetrofitClient.buildService(RetrofitInterface::class.java)
     var configLiveData = MutableLiveData<Array<String>>()
     var usersLiveData = MutableLiveData<Array<User>>()
 
-    fun getConfig(): LiveData<Array<String>> {
+    fun getConfig(activity: Activity?): LiveData<Array<String>> {
         if (configLiveData.value == null) {
             CallUtils.enqueueWithRetry(request.getConfig(), object : Callback<ConfigResponse> {
                 override fun onFailure(call: Call<ConfigResponse>, t: Throwable) {
                     Log.d(call.javaClass.simpleName, "Failure occurred " + t.localizedMessage)
+                    activity?.finish()
                 }
 
                 override fun onResponse(
@@ -40,12 +42,12 @@ class MainViewModel : ViewModel() {
         return configLiveData
     }
 
-    fun getUsers(): LiveData<Array<User>> {
+    fun getUsers(activity: Activity?): LiveData<Array<User>> {
         if (usersLiveData.value == null) {
             CallUtils.enqueueWithRetry(request.getUsers(), object : Callback<UserResponse> {
-
                 override fun onFailure(call: Call<UserResponse?>, t: Throwable) {
                     Log.d(call.javaClass.simpleName, "Failure occurred " + t.localizedMessage)
+                    activity?.finish()
                 }
 
                 override fun onResponse(

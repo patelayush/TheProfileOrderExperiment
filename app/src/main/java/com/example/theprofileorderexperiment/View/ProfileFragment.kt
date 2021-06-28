@@ -30,7 +30,7 @@ class ProfileFragment : Fragment() {
         val user: User? = requireArguments().getParcelable("user")
         val viewModel = activity?.let { ViewModelProvider(it).get(MainViewModel::class.java) }
         activity?.let {
-            viewModel?.getConfig()?.observe(it, Observer { profileOrder ->
+            viewModel?.getConfig(it)?.observe(it, Observer { profileOrder ->
                 if (profileOrder != null) {
                     for (item in profileOrder) {
                         when (item) {

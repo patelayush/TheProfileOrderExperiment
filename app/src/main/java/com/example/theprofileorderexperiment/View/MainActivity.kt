@@ -22,8 +22,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         var users: Array<User>? = null
         val viewModel = ViewModelProvider(this@MainActivity).get(MainViewModel::class.java)
-        viewModel.getConfig()
-        viewModel.getUsers().observe(this, Observer { usersResponse ->
+        viewModel.getConfig(this@MainActivity)
+        viewModel.getUsers(this@MainActivity).observe(this, Observer { usersResponse ->
             if (usersResponse != null && usersResponse.isNotEmpty()) {
                 users = usersResponse
                 if (savedInstanceState == null) {
