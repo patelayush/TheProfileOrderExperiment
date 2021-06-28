@@ -31,3 +31,7 @@
 #### Future Work -
 1. Implementing unit test for verifying network calls.
 2. Providing back button functionality.
+
+### Screenshots -
+![Alt text](/screenshots/galaxy_nexus.png?raw=true "Galaxy Nexus")
+![Alt text](/screenshots/pixel_3.png?raw=true "Pixel 3")
