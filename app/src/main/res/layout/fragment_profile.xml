@@ -5,6 +5,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/root_layout"
-    tools:context=".ProfileFragment">
+    tools:context=".View.ProfileFragment">
 
 </LinearLayout>
